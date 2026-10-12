@@ -76,3 +76,14 @@ description: AI+IP陪跑变现操盘手的9大核心客户陪跑与转化Skill�
 ## 档案更新
 
 用户汇报客户新进展（付款/交作业/断联/升级）时：立即更新对应客户档案的付费状态、分层与下一步动作。状态以用户最新说法为准，不自行猜测金额与事实。
+
+## 支持平台与安装（元信息，不影响技能执行）
+
+SKILL.md 是通用的开放技能格式（Anthropic Skills 标准）。完整图文步骤见仓库 README.md，各平台速查：
+
+- **豆包工作（Doubao Work）**：左侧「插件·技能·伙伴」→「技能」→「新建技能」，把本文件全文粘贴进技能正文并保存；或在对话中直接说"根据 GitHub 仓库 lichengyu1207/ip-peipao-9clients 创建技能"。
+- **扣子（Coze）**：扣子编程 → 对话框「技能」→「编程技能」→「创建技能」→「本地上传」（本文件置于压缩包根目录的 zip）→ 在「我的技能」中添加；扣子对话端用 `@` 或 `+` 添加技能。注意自定义技能单次生效，每次新任务需重新添加。
+- **Trae（IDE / TraeCode）**：设置 →「技能 / 规则与技能」→「创建」→ 上传 SKILL.md 或含 SKILL.md 的 zip，自动解析后确认；进阶可手动放入 `~/.trae-cn/skills/<技能名>/SKILL.md`（项目级放 `.trae/skills/`）。
+- **TraeWork（SOLO）**：左侧「Marketplace」→「Skills」页签 → 上传 zip（不支持直接传单个 .md 文件）。
+- **WorkBuddy**：「技能」页面 →「+ 添加技能」→「上传技能」导入本地技能包，自动配置；或手动放入 `~/.workbuddy/skills/<技能名>/SKILL.md`。
+- **其他**：Claude Code、Cursor 等兼容 Anthropic Skills 标准的工具可直接使用本技能。
