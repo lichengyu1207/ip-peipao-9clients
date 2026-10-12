@@ -14,6 +14,7 @@
 ```
 ip-peipao-9clients/
 ├── README.md                  # 本说明
+├── 使用说明.md                # 买家加载指引（拿到后怎么装、怎么用）
 ├── SKILL.md                   # 技能本体（客户档案为脱敏模板，替换成你的真实客户即可）
 └── ip-peipao-9clients.zip     # 一键导入包（SKILL.md 位于压缩包根目录，供各平台上传承用）
 ```
@@ -21,6 +22,8 @@ ip-peipao-9clients/
 ## 支持平台与安装方法
 
 > SKILL.md 是通用的开放技能格式（Anthropic Skills 标准），以下平台均原生兼容；Claude Code、Cursor 等支持同类格式的工具也可直接使用。
+>
+> 买家版完整图文加载步骤见 **[使用说明.md](使用说明.md)**。
 
 ### 豆包工作（Doubao Work）
 
