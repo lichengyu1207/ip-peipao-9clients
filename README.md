@@ -21,7 +21,7 @@ ip-peipao-9clients/
 
 ## 支持平台与安装方法
 
-> SKILL.md 是通用的开放技能格式（Anthropic Skills 标准），以下平台均原生兼容；Claude Code、Cursor 等支持同类格式的工具也可直接使用。
+> SKILL.md 是通用的开放技能格式（Anthropic Skills 标准），**68+ 款 AI 工具可直接读取**（详见下方「兼容生态」）。
 >
 > 买家版完整图文加载步骤见 **[使用说明.md](使用说明.md)**。
 
@@ -56,6 +56,15 @@ ip-peipao-9clients/
 1. 技能页面 →「+ 添加技能」→「上传技能」。
 2. 导入本地技能包（zip 或目录），系统自动完成配置，无需额外操作。
 3. 进阶：也可从 GitHub / Gitee 导入；或手动放入 `~/.workbuddy/skills/<技能名>/SKILL.md`。
+
+### 兼容生态（同格式直接可用）
+
+SKILL.md 是 Anthropic 发布的开放技能标准，**68+ 款 AI 工具可直接读取**，主流包括：
+
+- **编程 / IDE 代理**：Claude Code、Claude.ai、Cursor、Windsurf、OpenAI Codex、Gemini CLI、GitHub Copilot、VS Code、Qodo、Amp、Roo Code、Goose、Continue、Cline、Aider、OpenCode、Manus AI
+- **本地智能体**：OpenClaw（`openclaw skills install git:lichengyu1207/ip-peipao-9clients`，或克隆到 `~/.openclaw/skills/`）、WorkBuddy（兼容 OpenClaw 生态）
+
+安装方式基本一致：把含 SKILL.md 的文件夹放进该工具的 skills 目录，或通过其导入入口上传 zip。
 
 ## 怎么用
 
