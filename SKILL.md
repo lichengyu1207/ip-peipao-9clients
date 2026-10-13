@@ -86,4 +86,4 @@ SKILL.md 是通用的开放技能格式（Anthropic Skills 标准）。完整图
 - **Trae（IDE / TraeCode）**：设置 →「技能 / 规则与技能」→「创建」→ 上传 SKILL.md 或含 SKILL.md 的 zip，自动解析后确认；进阶可手动放入 `~/.trae-cn/skills/<技能名>/SKILL.md`（项目级放 `.trae/skills/`）。
 - **TraeWork（SOLO）**：左侧「Marketplace」→「Skills」页签 → 上传 zip（不支持直接传单个 .md 文件）。
 - **WorkBuddy**：「技能」页面 →「+ 添加技能」→「上传技能」导入本地技能包，自动配置；或手动放入 `~/.workbuddy/skills/<技能名>/SKILL.md`。
-- **其他**：Claude Code、Cursor 等兼容 Anthropic Skills 标准的工具可直接使用本技能。
+- **兼容生态（同格式直接可用）**：Claude Code、Claude.ai、Cursor、Windsurf、OpenAI Codex、Gemini CLI、GitHub Copilot、VS Code、Qodo、Amp、Roo Code、Goose、Continue、Cline、Aider、OpenCode、Manus AI 等 68+ 款工具可直接读取；OpenClaw 可执行 `openclaw skills install git:lichengyu1207/ip-peipao-9clients`。安装方式：把含 SKILL.md 的文件夹放入该工具的 skills 目录，或上传 zip。
