@@ -45,6 +45,16 @@ description: AI+IP陪跑变现操盘手的9大核心客户陪跑与转化Skill�
 8. **客户H（L2）**：跟进标准化交付流程与技术安装问题；案例＝产品，做完目标数量才能定价。下一个动作：本周再跑3个案例＋1次同行拆解。
 9. **客户I（L2）**：逼他写判断标准，逻辑不写出来，工具永远搭不起来。下一个动作：交出判断标准初稿，准备填入Agent。
 
+## 自动化脚本（每日/每周操作，推荐优先使用）
+
+同目录 `scripts/followup.py` 可一键输出今日跟进计划与每周漏斗周报（规则与本技能一致）：
+
+- `python scripts/followup.py` → 今日最多挑 3 个客户 + 每人 1 条私信草稿
+- `python scripts/followup.py --weekly` → 每周漏斗周报（分层分布 + 该动没动名单）
+- `python scripts/followup.py --clients 我的客户.json` → 用你自己的客户档案（模板见 `scripts/clients.example.json`）
+
+有 Python 环境时优先跑脚本取草稿，再人工审核后发出；无 Python 环境时按下方每日/每周 SOP 手动执行。
+
 ## 每日SOP
 
 1. 用户给出当天要跟进的客户，或直接说"今天跟进谁"。
@@ -66,6 +76,14 @@ description: AI+IP陪跑变现操盘手的9大核心客户陪跑与转化Skill�
 - **L3 企业版**：给价值＋给稀缺。例："你的问题不在流量，在结构。我帮你拆一页利润结构，你约20分钟，拆完你再决定。"
 - **客户断联/不动**："你做好了再来找我。" 不追问。
 
+## 自迭代与学习规则（用得越久越准）
+
+1. **每次使用结束**：把跟进经验追加到 `memory/learning-log.md`。脚本方式：`python scripts/followup.py --note "客户B回复了，对案例拆解感兴趣"`；对话中也可直接让 AI 记录。
+2. **每周复盘**：回看学习日志，出现 2 次以上的经验固化进 SKILL.md（话术模板、客户分层规则），或直接更新客户档案。
+3. **客户档案持续更新**：付款 / 交作业 / 断联 / 升级随时更新；旧话术不再有效时直接替换。
+4. **学习只在本机**：所有学习记录只存在本技能 `memory/` 目录，不上传、不外发。
+5. **新任务入口**：拿不准用哪个技能时，先跑决策层自动选技能：`python pi-jev/scripts/pi_jev.py "任务"`（同包 pi-jev 技能，Jev 式路由，无需 API）。
+
 ## 底线（不可违反）
 
 - 不包安装、不包服务器、不包远程操作。
@@ -86,4 +104,5 @@ SKILL.md 是通用的开放技能格式（Anthropic Skills 标准）。完整图
 - **Trae（IDE / TraeCode）**：设置 →「技能 / 规则与技能」→「创建」→ 上传 SKILL.md 或含 SKILL.md 的 zip，自动解析后确认；进阶可手动放入 `~/.trae-cn/skills/<技能名>/SKILL.md`（项目级放 `.trae/skills/`）。
 - **TraeWork（SOLO）**：左侧「Marketplace」→「Skills」页签 → 上传 zip（不支持直接传单个 .md 文件）。
 - **WorkBuddy**：「技能」页面 →「+ 添加技能」→「上传技能」导入本地技能包，自动配置；或手动放入 `~/.workbuddy/skills/<技能名>/SKILL.md`。
+- **Pi（pi.dev 编码智能体）与 Jev 决策层**：把技能文件夹放入 Pi 的 skills 目录即可使用；Jev 式自动选技能/档位路由/使用学习见同包 `pi-jev` 技能（纯 Python 实现，无需 API 密钥）。
 - **兼容生态（同格式直接可用）**：Claude Code、Claude.ai、Cursor、Windsurf、OpenAI Codex、Gemini CLI、GitHub Copilot、VS Code、Qodo、Amp、Roo Code、Goose、Continue、Cline、Aider、OpenCode、Manus AI 等 68+ 款工具可直接读取；OpenClaw 可执行 `openclaw skills install git:lichengyu1207/ip-peipao-9clients`。安装方式：把含 SKILL.md 的文件夹放入该工具的 skills 目录，或上传 zip。
