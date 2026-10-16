@@ -115,7 +115,7 @@ description: AI+IP陪跑变现操盘手的9大核心客户陪跑与转化Skill�
 
 SKILL.md 是通用的开放技能格式（Anthropic Skills 标准）。完整图文步骤见仓库 README.md，各平台速查：
 
-- **豆包工作（Doubao Work）**：左侧「插件·技能·伙伴」→「技能」→「新建技能」，把本文件全文粘贴进技能正文并保存；或在对话中直接说"根据 GitHub 仓库 lichengyu1207/ip-peipao-9clients 创建技能"。
+- **对话类 AI 工具（通用）**：在技能 / 插件管理里「新建技能」，把本文件全文粘贴进技能正文并保存；或在对话中直接说"根据 GitHub 仓库 lichengyu1207/ip-peipao-9clients 创建技能"。
 - **扣子（Coze）**：扣子编程 → 对话框「技能」→「编程技能」→「创建技能」→「本地上传」（本文件置于压缩包根目录的 zip）→ 在「我的技能」中添加；扣子对话端用 `@` 或 `+` 添加技能。注意自定义技能单次生效，每次新任务需重新添加。
 - **Trae（IDE / TraeCode）**：设置 →「技能 / 规则与技能」→「创建」→ 上传 SKILL.md 或含 SKILL.md 的 zip，自动解析后确认；进阶可手动放入 `~/.trae-cn/skills/<技能名>/SKILL.md`（项目级放 `.trae/skills/`）。
 - **TraeWork（SOLO）**：左侧「Marketplace」→「Skills」页签 → 上传 zip（不支持直接传单个 .md 文件）。
